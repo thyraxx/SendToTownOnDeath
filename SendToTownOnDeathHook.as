@@ -1,7 +1,8 @@
 [Hook]
 void GameModePlayerDied(Campaign@ campaign, PlayerRecord@ player, PlayerRecord@ killer, DamageInfo &di)
 {
-	DepositRun(player);
+	if(campaign.m_allDead)
+		DepositRun(player);
 }
 
 void DepositRun(PlayerRecord& record)
