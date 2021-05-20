@@ -2,7 +2,7 @@
 void GameModePlayerDied(Campaign@ campaign, PlayerRecord@ player, PlayerRecord@ killer, DamageInfo &di)
 {
 	if(campaign.m_allDead)
-		DepositRun(player);
+		DepositRun(GetLocalPlayerRecord());
 }
 
 void DepositRun(PlayerRecord& record)
